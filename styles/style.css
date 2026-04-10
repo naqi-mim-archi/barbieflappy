@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffdeeb;
+    color: #d81b60;
+    font-family: 'Montserrat', sans-serif;
+}
+
+#gameCanvas {
+    display: block;
+}
+
+#ui-layer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay {
+    pointer-events: auto;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.85);
+    padding: 2.5rem;
+    border: 5px solid #ff69b4;
+    box-shadow: 0 0 30px rgba(255, 105, 180, 0.5);
+    border-radius: 30px;
+    backdrop-filter: blur(5px);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.title {
+    font-family: 'Pacifico', cursive;
+    font-size: 4.5rem;
+    color: #ff1493;
+    margin: 0;
+    text-shadow: 3px 3px 0px #fff, 6px 6px 0px #ffb6c1;
+}
+
+.subtitle {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+    color: #ff69b4;
+    font-weight: bold;
+}
+
+.difficulty-selector button, #gameover-screen button {
+    display: block;
+    width: 240px;
+    margin: 15px auto;
+    padding: 15px;
+    background: #ff69b4;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 0 #d81b60;
+}
+
+.difficulty-selector button:hover, #gameover-screen button:hover {
+    transform: scale(1.05) translateY(-2px);
+    background: #ff1493;
+    box-shadow: 0 6px 0 #ad1457;
+}
+
+.difficulty-selector button:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 0 #ad1457;
+}
+
+.death-text {
+    font-family: 'Pacifico', cursive;
+    font-size: 3rem;
+    color: #ff1493;
+    margin: 0;
+}
+
+#final-score, #high-score, #global-rank {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #d81b60;
+    font-weight: 700;
+}
