@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dreamhouse Dash: Glamour Flight</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <canvas id="gameCanvas"></canvas>
+    <div id="ui-layer">
+        <div id="menu-screen" class="overlay">
+            <h1 class="title">DREAMHOUSE DASH</h1>
+            <p class="subtitle">Everything is better in pink!</p>
+            <div class="difficulty-selector">
+                <button onclick="startGame('fashionista')">Fashionista</button>
+                <button onclick="startGame('icon')">Style Icon</button>
+                <button onclick="startGame('superstar')">Superstar</button>
+            </div>
+        </div>
+        <div id="gameover-screen" class="overlay hidden">
+            <h2 class="death-text">FASHION FAUX PAS!</h2>
+            <p id="final-score">Score: 0</p>
+            <p id="high-score">High Score: 0</p>
+            <p id="global-rank">Rank: Fashion Novice</p>
+            <button onclick="resetGame()">Try a New Outfit</button>
+        </div>
+    </div>
+    <script src="src/main.js"></script>
+</body>
+</html>
